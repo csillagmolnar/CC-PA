@@ -2,9 +2,10 @@
 
 ## Guide line
     1. Describe the structure of the current network and machine setups
-    2. Reconnaissance and attack
-    3. Detection of penetration
-    4. Appropiate security measures
+    2. Reconnaissance - DEMO?
+    3. Attack - DEMO
+    4. Detection of penetration - DEMO
+    5. Appropiate security measures
     
 ## Tools
     1. Offensive machine setup
@@ -14,6 +15,7 @@
         - mitmproxy2swagger
         - kiterunner
         - gobuster
+        - OWASP ZAP
         
 ## Documentation
 1. Describe the structure of the current network and machine setups
@@ -65,7 +67,61 @@
             ![Foxy-postman](images/foxyproxy_postman.png)
             ![Foxy-burp](images/foxyproxy_burp.png)
             
-        - Add Burp Suite certificate to the browser
-        - Install postman, mitmproxy2swagger, kiterunner, gobuster
+        - Add Burp Suite certificate to the browser (mitm proxy)
+        - Install postman, mitmproxy2swagger, kiterunner, gobuster, OWASP ZAP
             
+2. Reconnaissance - Demo
+    - Nmap
+        General detection:
+            `nmap -sC -sV 10.10.0.15`
+            
+            ![Nmap general](images/nmap_general.png)
+            
+        All port scan:
+            ![Nmap all port](images/nmap_allport.png)
+            
+            Check every port on browser
+            
+        Check a specific port's service:
+            ![Nmap 8025 service](images/nmap_service_8025.png)
+            
+   
+    - Gobuster (directory brute-force)
+        ![Gobuster directories](images/gobuster_result.png)
+        
+    - Kiterunner (API endpoints)
+        ![Kiterunner small](images/kiterunner_smallresult.png)
+        ![Kiterunner result](images/kiterunner_wellknown.png)
+        
+    - Dev tool + mitmproxy2swagger
+        Filter : api 
+        ![Dev tool request header](images/devtool_headers2.png)
+        ![Dev tool request header2](images/devtool_headers.png)
+        
+        Start capture everything on the website
+        
+        Network -> Settings -> Persist logs
+        
+        Use everything on the website
+        
+        Save the HAR file
+        
+        Create swagger file:
+        
+        `$ sudo mitmproxy2swagger -i crapi.har -o crapi.yml -p http://10.10.0.15 --format har` 
+        
+        ![spec.yml ignore lines](images/specyml_ignore.png)
+        
+        ![mitmproxy2swagger error msg](images/mitm2swagger_terminalerror.png)
+        
+        ![mitm2s solved](images/mitm2swagger_codeproblem.png)
+
+    - Swagger
+        Check documentation        
+        
+        ![OpenAPI doc](images/swagger_openapi.png) 
+        
     
+
+            
+
