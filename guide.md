@@ -119,7 +119,26 @@
     - Swagger
         Check documentation        
         
-        ![OpenAPI doc](images/swagger_openapi.png) 
+        ![OpenAPI doc](images/swagger_openapi.png)
+       
+    - OWASP ZAP (vulnerability scanner)
+        A generic vulnerability scan lead to a false-negative result, it can gives false secure feelings.
+        
+        Automated scanners detect API8:2023 Security Misconfiguration, e.g
+            - cross-origin resource sharing policy is missing
+            - transport layer security is weak or missing
+            - verbose error messages 
+        
+        
+        Unauthenticated scan - automated
+        ![ZAP automated scan](images/zap_automated_scan.png)
+        ![ZAP automates result](images/zap_automates_result.png)
+        
+        ![]()
+        
+        Authenticated scan can be done by manual explore
+        ![ZAP manual](images/zap_manual.png)
+        ![ZAP alerts](images/zap_alerts.png)
         
     
 
