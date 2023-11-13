@@ -18,6 +18,10 @@
 ## Documentation
 1. Describe the structure of the current network and machine setups
 
+    LAN: 10.10.24.0/24
+    
+    WAN: 10.10.0.0/24
+    
     - Defensive machine (10.10.24.103)
         - crAPI install    
             Github repository: https://github.com/OWASP/crAPI	
@@ -37,6 +41,20 @@
             `$sudo docker compose -f docker-compose.yml --compatibility up -d`
     
     - Firewall (10.10.24.1/10.10.0.15)
+    
+        - set a HAproxy
+            ![HA_server](images/HA_realservers.png)
+            ![HA_backend](images/HA_backend.png)
+            ![HA_public](images/HA_publicservice.png)
+        - appropiate floating rules to HAproxy
+            ![Opnsense floating ruls](images/opnsense_floating_rules.png)
+            
+            And now our website is available from WAN
+        - allow ping
+            ![NMAP ping error](images/nmap_error_msg.png) 
+            
+            ![Opnsense new floating rule](images/opnsense_pingrule1.png)
+            ![Opnsense new floating rule](images/opnsense_pingrule2.png)
     - Offensive machine (10.10.0.138)
         - Foxyproxy
             
@@ -46,5 +64,8 @@
             
             ![Foxy-postman](images/foxyproxy_postman.png)
             ![Foxy-burp](images/foxyproxy_burp.png)
+            
+        - Add Burp Suite certificate to the browser
+        - Install postman, mitmproxy2swagger, kiterunner, gobuster
             
     
