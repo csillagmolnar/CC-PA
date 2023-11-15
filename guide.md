@@ -17,6 +17,9 @@
         - gobuster
         - OWASP ZAP
         
+    2. Defensive machine
+        - docker 
+        
 ## Documentation
 1. Describe the structure of the current network and machine setups
 
@@ -139,6 +142,46 @@
         Authenticated scan can be done by manual explore
         ![ZAP manual](images/zap_manual.png)
         ![ZAP alerts](images/zap_alerts.png)
+        
+3. Attacks
+- BOLA (Broken Object Level Authorization) + Excessive Data Exposure
+
+    BOLA = access controls for resources (objects) are not properly implemented -> unauthorized access to a particular object or data manipulation
+    
+    
+
+    Go to 'Community' tab
+    See GET request
+   ![BOLA GET request](images/bola_1.png)
+   
+   Copy it to Postman to see response
+   
+   ![BOLA GET response](images/bola_2.png)
+   
+   When we go to a specific post, in the endpoint, we can see the user's ID and, as in the response the vehicle ID too
+   
+   ![BOLA post response](images/bola_3.png)
+   
+   Exploit BOLA by vehicle ID
+   
+   Now we can see where is a user's car
+   
+   ![BOLA ](images/bola_4.png)
+    
+    
+   - How to defense against BOLA, Excessive Data Exposure?
+    
+        -BOLA: 
+            - use Least Privilege principle
+            - RBAC 
+            - validate user input
+    
+    
+        -EDE: 
+            - Test the body of API's response, the body should not contain any sensitive information
+   
+
+
         
     
 
