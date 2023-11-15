@@ -148,9 +148,17 @@
 
     BOLA = access controls for resources (objects) are not properly implemented -> unauthorized access to a particular object or data manipulation
     
-    
+   - BOLA
+        
+       
+   ![BOLA simple](images/bola_5.png)
 
+
+   - BOLA + Excessive Data Exposure
+   
     Go to 'Community' tab
+    
+    
     See GET request
    ![BOLA GET request](images/bola_1.png)
    
