@@ -187,7 +187,50 @@
     
         -EDE: 
             - Test the body of API's response, the body should not contain any sensitive information
-   
+            
+- MASS  ASSIGNMENT
+    - Improper data management
+    - API uses the same objects when creating and updating records -> privilege escalation, bypass built-in sec tools
+    - 'user' object -> replay POST request: true isAdmin during user creation
+        - name
+        - email
+        - isAdmind
+        
+    - Bank API example:
+        API allows users to update the email address, but this vulnerability might let the user to send a request that updates their account balance
+        
+     ![Mass get request](images/mass_1.png)
+     ![Mass post request response](images/mass_2.png)
+     ![Mass new post request w/ response](images/mass_3.png)
+     ![New product, new balance in shop](images/mass_4.png)
+        
+    - Defense: object validation
+    
+- PAYLOAD INJECTION
+    - Weak input validation
+    - Rule: never trust in user's input
+    - Alter data to manipulate queries
+    - Manipulate back-end database, see sensitive data, and may be able to delete or modify them 
+    - Possible injection endpoints -> user inputs
+    
+    1. Use Burp Suite to capture the request and use Foxyproxy
+    ![Invalid coupon](images/injection_1.png)
+    ![Burp request](images/injecton_2.png)
+    
+    2. Load the injection patterns to the Payload Settings and uncheck URL-encoding, after start attack
+    ![Payload position](images/injection_4.png)
+    
+    3. 422 Status
+    ![Attack error](images/injection_3.png)
+    
+    4. Delete double quotes
+    ![New payload](images/injection_5.png)
+    
+    5.Get coupon code
+    ![Get coupon](imamges/injecion_6.png)
+    
+    6. Apply coupon
+    ![Coupon](images/injection_7.png)
 
 
         
