@@ -23,6 +23,10 @@
 ## Documentation
 1. Describe the structure of the current network and machine setups
 
+    ![Network](images/network.png)
+
+
+
     LAN: 10.10.24.0/24
     
     WAN: 10.10.0.0/24
@@ -208,6 +212,7 @@
     - Defense: object validation
     
 - PAYLOAD INJECTION
+
     - Weak input validation
     - Rule: never trust in user's input
     - Alter data to manipulate queries
