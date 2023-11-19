@@ -85,11 +85,11 @@
         
             `nmap -sC -sV 10.10.0.15`
             
-            ![Nmap general](images/nmap_general.png)
+        ![Nmap general](images/nmap_general.png)
             
         All port scan:
         
-            ![Nmap all port](images/nmap_allport.png)
+        ![Nmap all port](images/nmap_allport.png)
             
             Check every port on browser
             
