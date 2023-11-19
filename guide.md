@@ -2,10 +2,9 @@
 
 ## Guide line
     1. Describe the structure of the current network and machine setups
-    2. Reconnaissance - DEMO?
-    3. Attack - DEMO
-    4. Detection of penetration - DEMO
-    5. Appropiate security measures
+    2. Reconnaissance 
+    3. Attack
+
     
 ## Tools
     1. Offensive machine setup
@@ -33,13 +32,16 @@
     
     - Defensive machine (10.10.24.103)
         - crAPI install    
-            Github repository: https://github.com/OWASP/crAPI	
+
             
             Docker install:
                 Docker is a platform that enables developers to automate the deployment of applications within lightweight, portable containers.
                
                 `$ sudo apt install -y docker.io`
+                
                 `$ sudo systemctl enable docker –now`
+                
+                Github repository: https://github.com/OWASP/crAPI	
 
         - change website’s IP address
              ![Crapiweb](images/dockeryml_crapiweb.png)
@@ -77,14 +79,16 @@
         - Add Burp Suite certificate to the browser (mitm proxy)
         - Install postman, mitmproxy2swagger, kiterunner, gobuster, OWASP ZAP
             
-2. Reconnaissance - Demo
+2. Reconnaissance 
     - Nmap
         General detection:
+        
             `nmap -sC -sV 10.10.0.15`
             
             ![Nmap general](images/nmap_general.png)
             
         All port scan:
+        
             ![Nmap all port](images/nmap_allport.png)
             
             Check every port on browser
@@ -94,6 +98,7 @@
             
    
     - Gobuster (directory brute-force)
+    
         ![Gobuster directories](images/gobuster_result.png)
         
     - Kiterunner (API endpoints)
@@ -101,8 +106,12 @@
         ![Kiterunner result](images/kiterunner_wellknown.png)
         
     - Dev tool + mitmproxy2swagger
+    
         Filter : api 
+        
         ![Dev tool request header](images/devtool_headers2.png)
+        
+        
         ![Dev tool request header2](images/devtool_headers.png)
         
         Start capture everything on the website
@@ -124,6 +133,7 @@
         ![mitm2s solved](images/mitm2swagger_codeproblem.png)
 
     - Swagger
+    
         Check documentation        
         
         ![OpenAPI doc](images/swagger_openapi.png)
@@ -184,10 +194,9 @@
     
    - How to defense against BOLA, Excessive Data Exposure?
     
-        -BOLA: 
-            - use Least Privilege principle
-            - RBAC 
-            - validate user input
+        -BOLA:
+        
+            - proper authorization mechanism
     
     
         -EDE: 
@@ -237,6 +246,9 @@
     
     6. Apply coupon
     ![Coupon](images/injection_7.png)
+    
+    Defense: 
+        - Validate user input
 
 
         
