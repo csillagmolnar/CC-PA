@@ -220,7 +220,7 @@
         
     - Defense: object validation
     
-- PAYLOAD INJECTION
+- NoSQL INJECTION
 
     - Weak input validation
     - Rule: never trust in user's input
