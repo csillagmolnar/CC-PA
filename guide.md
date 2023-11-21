@@ -230,7 +230,7 @@
     
     1. Use Burp Suite to capture the request and use Foxyproxy
     ![Invalid coupon](images/injection_1.png)
-    ![Burp request](images/injecton_2.png)
+    ![Burp request](images/injection_2.png)
     
     2. Load the injection patterns to the Payload Settings and uncheck URL-encoding, after start attack
     ![Payload position](images/injection_4.png)
