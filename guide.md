@@ -242,7 +242,7 @@
     ![New payload](images/injection_5.png)
     
     5.Get coupon code
-    ![Get coupon](imamges/injection_6.png)
+    ![Get coupon](images/injection_6.png)
     
     6. Apply coupon
     ![Coupon](images/injection_7.png)
