@@ -37,11 +37,11 @@
             Docker install:
                 Docker is a platform that enables developers to automate the deployment of applications within lightweight, portable containers.
                
-                `$ sudo apt install -y docker.io`
+                `$ sudo apt install -y docker.io
                 
-                `$ sudo systemctl enable docker –now`
+                $ sudo systemctl enable docker –now`
                 
-                Github repository: https://github.com/OWASP/crAPI	
+               Github repository: https://github.com/OWASP/crAPI	
 
         - change website’s IP address
              ![Crapiweb](images/dockeryml_crapiweb.png)
@@ -69,7 +69,7 @@
     - Offensive machine (10.10.0.138)
         - Foxyproxy
             
-            It heps you configure your web browser to use a forward proxy. 
+            It helps you configure your web browser to use a forward proxy. 
             
             Postman and Burp Suite have their own proxy, with Foxyproxy it is very easy to switch between them.
             
@@ -91,7 +91,7 @@
         
         ![Nmap all port](images/nmap_allport.png)
             
-            Check every port on browser
+          Check every port on browser
             
         Check a specific port's service:
             ![Nmap 8025 service](images/nmap_service_8025.png)
@@ -142,8 +142,11 @@
         A generic vulnerability scan lead to a false-negative result, it can gives false secure feelings.
         
         Automated scanners detect API8:2023 Security Misconfiguration, e.g
+        
             - cross-origin resource sharing policy is missing
+            
             - transport layer security is weak or missing
+            
             - verbose error messages 
         
         
@@ -152,11 +155,7 @@
         ![ZAP automated scan](images/zap_automated_scan.png)
         ![ZAP automates result](images/zap_automated_result.png)
         
-        ![]()
-        
-        Authenticated scan can be done by manual explore
-        ![ZAP manual](images/zap_manual.png)
-        ![ZAP alerts](images/zap_alerts.png)
+
         
 3. Attacks
 - BOLA (Broken Object Level Authorization) + Excessive Data Exposure
@@ -200,6 +199,7 @@
     
     
         -EDE: 
+            
             - Test the body of API's response, the body should not contain any sensitive information
             
 - MASS  ASSIGNMENT
@@ -208,7 +208,7 @@
     - 'user' object -> replay POST request: true isAdmin during user creation
         - name
         - email
-        - isAdmind
+        - isAdmin
         
     - Bank API example:
         API allows users to update the email address, but this vulnerability might let the user to send a request that updates their account balance
