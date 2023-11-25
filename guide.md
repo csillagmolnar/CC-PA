@@ -158,6 +158,7 @@
         Authenticated scan - manual
         
         ![ZAP manual scan](images/zap_manual.png)
+        ![ZAP manual scan](images/zap_alerts.png)
         
 3. Attacks
 - BOLA (Broken Object Level Authorization) + Excessive Data Exposure
