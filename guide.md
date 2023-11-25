@@ -16,7 +16,7 @@
         - gobuster
         - OWASP ZAP
         
-    2. Defensive machine
+    2. API machine
         - docker 
         
 ## Documentation
@@ -30,20 +30,20 @@
     
     WAN: 10.10.0.0/24
     
-    - Defensive machine (10.10.24.103)
+    - API machine (10.10.24.103)
         - crAPI install    
 
             
             Docker install:
                 Docker is a platform that enables developers to automate the deployment of applications within lightweight, portable containers.
                
-                `$ sudo apt install -y docker.io
+                $ sudo apt install -y docker.io
                 
-                $ sudo systemctl enable docker –now`
+                $ sudo systemctl enable docker –now
                 
-               Github repository: https://github.com/OWASP/crAPI	
+            Github repository: https://github.com/OWASP/crAPI	
 
-        - change website’s IP address
+        - change website’s IP address in docker-compose.yml
              ![Crapiweb](images/dockeryml_crapiweb.png)
              ![Mailhog](images/dockeryml_mailhog.png)
             
@@ -102,8 +102,8 @@
         ![Gobuster directories](images/gobuster_result.png)
         
     - Kiterunner (API endpoints)
-        ![Kiterunner small](images/kiterunner_smallresult.png)
-        ![Kiterunner result](images/kiterunner_wellknown.png)
+    
+        ![Kiterunner result](images/kiterunner.png)
         
     - Dev tool + mitmproxy2swagger
     
@@ -155,14 +155,14 @@
         ![ZAP automated scan](images/zap_automated_scan.png)
         ![ZAP automates result](images/zap_automated_result.png)
         
-
+        Authenticated scan - manual
+        
+        ![ZAP manual scan](images/zap_manual.png)
         
 3. Attacks
 - BOLA (Broken Object Level Authorization) + Excessive Data Exposure
 
     BOLA = access controls for resources (objects) are not properly implemented -> unauthorized access to a particular object or data manipulation
-    
-   - BOLA
         
        
    ![BOLA simple](images/bola_5.png)
