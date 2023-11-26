@@ -79,17 +79,23 @@
     - Nmap
         General detection:
         
-            `nmap -sC -sV 10.10.0.15`
+            `$ nmap -sC -sV -Pn 10.10.0.15`
             
         ![Nmap general](images/nmap_general.png)
             
         All port scan:
-        
+            
+            `$ nmap -p- -Pn 10.10.0.15`
+            
         ![Nmap all port](images/nmap_allport.png)
             
           Check every port on browser
             
         Check a specific port's service:
+        
+        
+            `$ nmap -sV -Pn 10.10.0.15 -p 8025`
+            
             ![Nmap 8025 service](images/nmap_service_8025.png)
             
    
