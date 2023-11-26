@@ -61,11 +61,7 @@
             ![Opnsense floating ruls](images/opnsense_floating_rules.png)
             
             And now our website is available from WAN
-        - allow ping
-            ![NMAP ping error](images/nmap_error_msg.png) 
-            
-            ![Opnsense new floating rule](images/opnsense_pingrule1.png)
-            ![Opnsense new floating rule](images/opnsense_pingrule2.png)
+
     - Offensive machine (10.10.0.138)
         - Foxyproxy
             
@@ -137,6 +133,12 @@
         Check documentation        
         
         ![OpenAPI doc](images/swagger_openapi.png)
+        
+        ![Login](images/swagger_login.png)
+        ![Mechanic report](images/swagger_mechanic.png)
+        ![Location](images/swagger_location.png)
+        ![Products](images/swagger_products.png)
+        ![Posts](images/swagger_post.png)
        
     - OWASP ZAP (vulnerability scanner)
         A generic vulnerability scan lead to a false-negative result, it can gives false secure feelings.
