@@ -96,7 +96,7 @@
         
             `$ nmap -sV -Pn 10.10.0.15 -p 8025`
             
-            ![Nmap 8025 service](images/nmap_service_8025.png)
+        ![Nmap 8025 service](images/nmap_service_8025.png)
             
    
     - Gobuster (directory brute-force)
@@ -144,7 +144,7 @@
         ![Mechanic report](images/swagger_mechanic.png)
         ![Location](images/swagger_location.png)
         ![Products](images/swagger_products.png)
-        ![Posts](images/swagger_post.png)
+        ![Posts](images/swagger_posts.png)
        
     - OWASP ZAP (vulnerability scanner)
         A generic vulnerability scan lead to a false-negative result, it can gives false secure feelings.
